@@ -47,14 +47,14 @@ frame.on("ready", () => {
     // 2. Use pizzazz.createShape(type, color, width, height) (or use your own Shape, Bitmap, Container, etc.)
 
    var shape = "cloud";
-   var shape2 = pizzazz.makeShape(shape, tin, 550);
-   var shape1 = pizzazz.makeShape(shape, green, 550);
+   var shape2 = pizzazz.makeShape(shape, tin, 450);
+   var shape1 = pizzazz.makeShape(shape, green, 450);
 
     // 3. Pass the shape into the Button or Pane class as the background parameter
     // 4. Optionally provide a second shape for the rollBacking of the Button (not the Pane)
 
     var button = new zim.Button({
-       width:550, height:160,
+       width:500, height:160,
        label:"16, 06, 68, 88, ?, 98.\n\nWhat is the '?'",
        backing:shape1,
        rollBacking:shape2
@@ -75,15 +75,15 @@ frame.on("ready", () => {
 
 		// 2. Use pizzazz.createShape(type, color, width, height) (or use your own Shape, Bitmap, Container, etc.)
 		// 3. Pass the shape into the Button or Pane class as the background parameter
-     pizzazz.makeShape("roadside", frame.pink).center(page2).sca(4)
+     pizzazz.makeShape("roadside", frame.pink).center(page2).sca(3)
 
      var message = new zim.Label({
-        size:32,
+        size:31,
         font:"rockwell",
 	   text: "78\n\nAll numbers when\n read upside down,\nare 86 - 91 ",
         color:"rgba(256,256,256,.9)",
         align:"center",
-        lineHeight:32,
+        lineHeight:31,
 
    }).center(page2).sha();
 
@@ -91,7 +91,7 @@ frame.on("ready", () => {
     const pages = new Pages([
         {page:page1},
         {page:page2}
-    ], "slide").addTo();
+      ], "slide").addTo();
 
 
     frame.on("resize", () => {
